@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sadia's Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+
+         <!-- Icon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!--  Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+		<!-- CSS -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <script src="js/product.js"></script>
+		
+		
+        
+
+        <!--  Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="home.html" class="nav-item nav-link active">Home</a> 
+							<a href="product.html" class="nav-item nav-link">Products</a> 							
+							<div class="nav-item dropdown">
+                                <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Product Category</a>
+								<div class="dropdown-menu">
+                                    <a href="Fashion & Beauty" class="dropdown-item">Fashion & Beauty</a>
+                                    <a href="Men & Womens Item" class="dropdown-item">Kids Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Men & Womens Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Gadgets & Electronics</a>
+                                    <a href="Kids Item" class="dropdown-item">Toys</a>
+                                </div>
+							</div>
+                            <a href="results.html" class="nav-item nav-link">Product Detail</a>                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="wishlist" class="dropdown-item">Wishlist</a>
+                                    <a href="login" class="dropdown-item">Login & Register</a>
+                                    <a href="contact" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->       
+        
+        <!-- Bottom Bar Start -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="home.html">
+                                <img src="image/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span>
+                            </a>
+                            <a href="cart" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>(0)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar End --> 
+				
+				<!-- Container for the image gallery -->
+				<div class="container">
+
+				<!-- Full-width images with number text -->
+				  <div class="mySlides">
+					<div class="numbertext"></div>
+					  <img src="image/image 2.jpg" width= "200px" >
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext"></div>
+					  <img src="image/image 3.jpg"  >
+				  </div>
+
+
+				  <div class="mySlides">
+					<div class="numbertext"></div>
+					  <img src="image/image 5.jpg"  >
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext"></div>
+					  <img src="image/image 6.jpg"  >
+				  </div>
+
+				  <div class="mySlides">
+					<div class="numbertext"></div>
+					  <img src="image/image 7.jpg"  >
+				  </div>
+				  </div>
+
+				  <!-- Next and previous buttons -->
+				  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				  
+
+				  <!-- Thumbnail images -->
+				  <div class="row">
+					<div class="column">
+					  <img class="demo cursor" src="image/image 2.jpg" style= "width"="50%" height="50px"onclick="currentSlide(1)" alt>
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="image/image 3.jpg" style="width"="50%" height="50px" onclick="currentSlide(2)" alt>
+					</div>
+					
+					<div class="column">
+					  <img class="demo cursor" src="image/image 5.jpg" style="width"="50%" height="50px"  onclick="currentSlide(4)" alt>
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="image/image 6.jpg" style="width"="50%" height="50px" onclick="currentSlide(5)" alt>
+					</div>
+					<div class="column">
+					  <img class="demo cursor" src="image/image 7.jpg" style="width"="50%" height="50px" onclick="currentSlide(6)" alt>
+					</div>
+				  </div>
+					
+					<!-- product details -->
+					<div class="col-md-7">
+                        <div class="product-content">
+                            <div class="title"><h2>Half Sleeve Tunic</h2></div>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                     <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                               </div>
+							    <div class="container mt-4">
+								  <div class="row">
+									<div class="col-6 row-heading">
+									  Price: $45
+									</div>
+									<div class="col-3 row-heading">
+									 Quantity									  									
+									</div>
+									<div class="col-2 row-heading">
+									  Price
+									</div>									
+								  </div>
+								  <div class="row">
+									<div class="col-6">
+									 <h4> Select Quantity:</h4>
+									</div>
+									<div class="col-3">
+									  <input type="number" value="0" class="qty" id="qty_tunic"/>
+									</div>
+									<div class="col-2">
+									  <input type="number" readonly value="0" id="price_tunic"/>
+									</div>
+								  </div>
+								  								   								  								  								  
+								  <div class="row my-4">
+									<div class="col-9 text-right total">
+									 Total price: $
+									</div>
+									
+									<div class="col-2 total-val">
+									  <span id="total_value">0</span
+									</div>
+								  </div>								  
+								</div>
+								<div class="p-size">	
+                                     <h4>Size:</h4>
+                                     <div class="btn-group btn-group-sm">
+                                         <button type="button" class="btn">S</button>
+                                         <button type="button" class="btn">M</button>
+                                         <button type="button" class="btn">L</button>
+                                         <button type="button" class="btn">XL</button>
+										 <button type="button" class="btn">XXL</button>       
+                                     </div> 
+                                     </div>
+                                     <div class="p-color">
+                                         <h4>Color:</h4>
+                                        <div class="btn-group btn-group-sm">
+                                           <button type="button" class="btn">Red</button>
+                                           <button type="button" class="btn">Black</button>
+                                           <button type="button" class="btn">White</button>
+                                        </div> 
+                                        </div>
+                                        <div class="action">
+                                            <a class="btn" href="#"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                            <a class="btn" href="#"><i class="fa fa-shopping-bag"></i>Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+										
+								
+								<!-- product descrption -->
+                               <div class="tab-content">
+                                    <div id="description" class="container tab-pane active">
+                                        <h4>Product description</h4>
+                                        <p>
+                                          Classic Tee made with best Cotton - Top quality cotton for maximum comfort and longevity.</br>Best suit for any summer
+										outing. Very comfartable and easy to wash. You will feel amazing.
+											<br>Product Specification:</br>
+											<br>100% Cotton </br>
+											<br>Pull On closure</br>
+											<br>Machine Wash/br</br>
+											<br>Graphic wordmark rubber print</br>
+											<br>Rounded hem for a flattering fit</br>
+											<br>Regular fit</br>
+                                        </p>
+									</div>                                  
+                                 </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+		    </div>
+  
+				
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>123 Looka, Ottawa, Canada</p>
+                                <p><i class="fa fa-envelope"></i>looka@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>+1613-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Payment Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="image/payment-method.png" alt="Payment Method" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="image/ks.jpg" alt="Payment Security" />
+                            <img src="image/AVG.jpg" alt="Payment Security" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+              
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+         <script src="js/product.js"></script>
+               	  
+    
+	</body>
+</html>

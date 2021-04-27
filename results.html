@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sadia's Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+        <!-- CSS and js Libraries -->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <script src="js/sortsearch.js"></script>
+
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+		
+    </head>
+    <body>
+        
+        <!-- Nav Bar Start -->
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="home.html" class="nav-item nav-link active">Home</a> 
+							<a href="product.html" class="nav-item nav-link">Products</a> 							
+							<div class="nav-item dropdown">
+                                <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Product Category</a>
+								<div class="dropdown-menu">
+                                    <a href="Fashion & Beauty" class="dropdown-item">Fashion & Beauty</a>
+                                    <a href="Men & Womens Item" class="dropdown-item">Kids Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Men & Womens Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Gadgets & Electronics</a>
+                                    <a href="Kids Item" class="dropdown-item">Toys</a>
+                                </div>
+							</div>
+                            <a href="product.html" class="nav-item nav-link">Product Detail</a>                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="wishlist" class="dropdown-item">Wishlist</a>
+                                    <a href="login" class="dropdown-item">Login & Register</a>
+                                    <a href="contact" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->       
+        
+        <!-- Bottom Bar Start -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="home.html">
+                                <img src="image/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profille">
+                            <p> Looka a reliable Fashion Brand that makes you perfect</p>                           
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span>
+                            </a>
+                            <a href="cart" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>(0)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar End -->  
+                  
+        <!-- Product List Start -->
+		<body ng-app="myApp" ng-controller="myCtrl">       
+         <div class="search_drop_down">
+           <select  class="select select-styled" ng-model="searchKeyword" ng-change="selectBrandFilter(BrandFilter)">
+            <option value="">Select Brand </option>			
+            <option ng-repeat="pdt in products" >{{pdt.brand}}</option>
+          </select>			
+          <select class="select select-styled"  ng-model="priceFilter" ng-options="option for option in options" ng-change="selectPriceFilter(priceFilter)">
+	       <option value="">Sort By Price</option> 			
+	     </select>
+		  
+          <input class="search" placeholder="Search" size="40" type="text" ng-model="searchKeyword">
+        </div>
+        <div class="product_box" ng-repeat="pdt in products|filter: searchKeyword | orderBy:'price':priceFilter">
+		
+         <div class="single_1">
+           <div class="container">
+		      <div class="discount">
+			    <div class="discount_badge">{{pdt.discount}}</div>
+			      <span class="discount_text">Discount</span>				  
+		        </div>
+                  <img ng-src="{{pdt.image}}" />
+             </div>
+         </div>
+         <div class="single_2">
+            <div class="prod_desc" >
+                <span class="pdt_name">{{pdt.name}}</span>
+                  <div class="pdt_details_2_col">
+                    <span class="brand">Brand</span>
+                    <span class="brand_name">{{pdt.brand}}</span>
+                 </div>
+                 <div class="pdt_details_2_col">
+                    <span class="brand">Price</span>
+                    <span class="brand_name">{{pdt.price}}</span>
+                </div>
+				<div class="pdt_details_2_col" >
+				  <span class="brand">Rating:</span>					
+				  <span class="brand_name">{{pdt.rating}}</span>
+					 <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+				</div>
+			</div>
+		</div>
+        
+        <div class="single_3">
+            <div class="quantity_sec">
+                <label>Quantity</label>
+                <br>
+               <input placeholder="Quantity" type="number" ng-model="pdt.quantity" >
+            </div>
+        </div>
+        <div class="single_4">
+             <input type="image" src="image/cart.jpg" alt="Submit" width="25" height="30" ng-show="pdt.quantity<1?true:false" />
+	         <input type="image" src="" alt="" width="40" height="40"  ng-hide="pdt.quantity<1?true:false" ng-click="addToCart();"/>
+        </div>
+    </div>	
+ </body>
+
+                        
+                        <!-- Pagination Start -->
+						
+                        <div class="col-md-12">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>                       
+                    </div>     
+					
+                     <!-- Pagination end -->
+					                                                           
+   
+        
+        <!-- Footer Start -->
+		
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>123 Looka, Ottawa, Canada</p>
+                                <p><i class="fa fa-envelope"></i>looka@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>+1613-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Payment Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="image/payment-method.png" alt="Payment Method" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="image/ks.jpg" alt="Payment Security" />
+                            <img src="image/AVG.jpg" alt="Payment Security" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+       
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="js/sortsearch.js"></script>
+        
+    </body>
+</html>

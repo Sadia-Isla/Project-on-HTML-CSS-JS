@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sadia's Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+		<!-- CSS and js Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+		
+		<script src="js/search.js"></script>
+        <script src="https://kit.fontawesome.com/1935d064dd.js" crossorigin="anonymous"></script>
+
+        <!-- Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+		
+    </head>
+    <body>
+   
+        <!-- Nav Bar Start -->
+        <div class="nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto">
+                            <a href="home.html" class="nav-item nav-link active">Home</a> 
+							<a href="product.html" class="nav-item nav-link">Products</a> 							
+							<div class="nav-item dropdown">
+                                <a href="product.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Product Category</a>
+								<div class="dropdown-menu">
+                                    <a href="Fashion & Beauty" class="dropdown-item">Fashion & Beauty</a>
+                                    <a href="Men & Womens Item" class="dropdown-item">Kids Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Men & Womens Item</a>
+									<a href="Men & Womens Item" class="dropdown-item">Gadgets & Electronics</a>
+                                    <a href="Kids Item" class="dropdown-item">Toys</a>
+                                </div>
+							</div>
+                            <a href="results.html" class="nav-item nav-link">Product Detail</a>                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                                <div class="dropdown-menu">
+                                    <a href="wishlist" class="dropdown-item">Wishlist</a>
+                                    <a href="login" class="dropdown-item">Login & Register</a>
+                                    <a href="contact" class="dropdown-item">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-nav ml-auto">
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Login</a>
+                                    <a href="#" class="dropdown-item">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Nav Bar End -->      
+        
+        <!-- Bottom Bar Start -->
+        <div class="bottom-bar">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="home.html">
+                                <img src="image/logo.png" alt="Logo"></a>                           
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <div class="user">
+                            <a href="wishlist" class="btn wishlist">
+                                <i class="fa fa-heart"></i>
+                                <span>(0)</span>
+                            </a>
+                            <a href="cart" class="btn cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>(0)</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar End -->       
+        
+        <!-- Main Slider Start -->
+        <div class="header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <nav class="navbar bg-light">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-bars"></i>Menu</a></li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Best Products</a></li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>New Arrivals</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-female"></i>Fashion & Beauty</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-child"></i>Kids Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Men & Womens Item</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Gadgets & Electronics </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="fas fa-baby"></i>Toys</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="header-slider normal-slider">
+                            <img src="image/image1.jpg" width="800px" height="400px" />                             
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+        <!-- Main Slider End -->
+			
+			
+			 <!-- Product List Start -->
+        <div class="container">
+	       <div class="row" id="search">
+		     <form id="search-form" action="" method="POST" enctype="multipart/form-data">
+			   <div class="form-group col-xs-9">
+				<input class="form-control" type="text" placeholder="Search" />
+			</div>
+			<div class="form-group col-xs-3">
+				<button type="submit" class="btn btn-block btn-primary">Search</button>
+			</div>
+		</form>
+	    </div>
+	    <div class="row" id="filter">
+		  <form>			
+			<div class="form-group col-sm-3 col-xs-6"data-filter="name" class="filter-name filter form-control" >				
+			</div>
+			<div class="form-group col-sm-3 col-xs-6" data-filter="material" class="filter-material filter form-control" >				
+			</div>
+			<div class="form-group col-sm-3 col-xs-6" data-filter="price" class="filter-price filter form-control">										                                   
+		    </div>
+		  </form>
+	   </div>
+	   <div class="row" id="products">	
+	</div>
+</div>
+			
+           
+       
+        
+        <!-- Category Start-->
+        <div class="category">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="image/category-1.jpg" />
+                            <a class="category-name" href="">
+                                <p>Fashion</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-250">
+                            <img src="image/toys.jpg" />
+                            <a class="category-name" href="">
+                                <p>Best Toys</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-150">
+                            <img src="image/makeup-1.jpg" />
+                            <a class="category-name" href="">
+                                <p>Makeup</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-150">
+                            <img src="image/makeup.jpg" />
+                            <a class="category-name" href="">
+                                <p>Discover Yourself</p>
+                            </a>
+                        </div>
+                        <div class="category-item ch-250">
+                            <img src="image/gadgets.jpg" />
+                            <a class="category-name" href="">
+                                <p> Buy Essentials</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="category-item ch-400">
+                            <img src="image/product 8.jpg" />
+                            <a class="category-name" href="">
+                                <p> Life Styles</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category End-->       
+        
+           
+        
+        
+        <!-- Recent Product End -->
+        
+        <!-- Review Start -->
+        <div class="review">
+            <div class="container-fluid">
+                <div class="row align-items-center review-slider normal-slider">
+                    <div class="col-md-6">
+                        <div class="review-slider-item">
+                            <div class="review-img">
+                                <img src="image/user 1.jpg" width="400" height="300" alt="Image">
+                            </div>
+                            <div class="review-text">
+                                <h2>Diana Gale</h2>
+                                <h3>Fashion Designer</h3>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>
+                                  Its a nice online clothing store with lots of fashionable products.I appreciate their effort.   
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="review-slider-item">
+                            <div class="review-img">
+                                <img src="image/user 3.jpg" width="400" height="300" alt="Image">
+                            </div>
+                            <div class="review-text">
+                                <h2>Betsy Lia</h2>
+                                <h3>Social worker</h3>
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <p>
+                                  I love their collection and always wait for their latest collections.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Review End -->        
+        
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Get in Touch</h2>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>123 Looka, Ottawa, Canada</p>
+                                <p><i class="fa fa-envelope"></i>looka@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>+1613-456-7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Follow Us</h2>
+                            <div class="contact-info">
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Company Info</h2>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms & Condition</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h2>Purchase Info</h2>
+                            <ul>
+                                <li><a href="#">Payment Policy</a></li>
+                                <li><a href="#">Shipping Policy</a></li>
+                                <li><a href="#">Return Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row payment align-items-center">
+                    <div class="col-md-6">
+                        <div class="payment-method">
+                            <h2>We Accept:</h2>
+                            <img src="image/payment-method.png" alt="Payment Method" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-security">
+                            <h2>Secured By:</h2>
+                            <img src="image/ks.jpg" alt="Payment Security" />
+                            <img src="image/AVG.jpg" alt="Payment Security" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+              
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>      
+		<script src="js/search.js"></script>
+     
+    </body>
+</html>
